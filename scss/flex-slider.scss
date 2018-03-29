@@ -1,0 +1,54 @@
+.flex-slider{
+    .slide-buttons{
+        a{
+            color: #979EB2;
+            text-decoration: none;
+            font-size: 20px;
+            padding: 0 2px;
+            &.active{
+                color: #5BC0C3 !important; 
+            }
+        }
+        text-align: center;
+    }
+    .view-content{
+        .views-row{
+            display: inline-block;
+            /*border: 1px solid #0062A0;*/
+            margin: 0;
+            position: relative;
+        }            
+        white-space: nowrap;
+        width: 100%;
+        overflow:visible !important;
+        transition: .5s all;            
+    } 
+
+    .side-button-l{
+        float: left;
+        position: relative;
+        z-index: 10;
+        font-size: 30px;
+        color: #cccfd0;
+        text-decoration: none;
+        background-color: transparent;
+        /*            position: fixed;*/
+        left: 0;
+        padding-top: 50%;
+    }
+    .side-button-r{
+        float: right;
+        position: relative;
+        z-index: 10;
+        font-size: 30px;
+        color: #cccfd0;
+        text-decoration: none;
+        background-color: transparent;
+        /*position: fixed;*/
+        right: 0;
+        padding-top: 50%;
+    }
+    overflow: hidden;
+    /*border: 1px solid #ececec;*/
+    clear: both;
+}
