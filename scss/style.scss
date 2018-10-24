@@ -29,6 +29,27 @@ body{
             display: none;
         }
     }
+    header#navbar{
+        .navbar-header{
+            .logo-container{
+                a.logo{
+                    img{
+                        height: 1em; 
+                        margin-top: .6em;
+                    }
+                    margin-right: 10px;
+                    padding-right: 0;
+                }
+                a.navbar-brand{
+                    &:hover{
+                        color: #fff;
+                    }
+                    font-size: 1em;
+                }
+                text-align: center;
+            }
+        }
+    }
 }
 a{
     color: $color-link;
@@ -93,6 +114,10 @@ section{
             }
         }
     }
+}
+
+div.before-content{
+    background-color: $color-bgsoft;
 }
 
 div.view{
@@ -237,6 +262,13 @@ section.col-sm-12{
         clear:both;
         /*text-shadow: 0px 1px 5px rgba(150, 150, 150, 0.64);*/ 
         a{
+            &:hover{
+                width: 5.5rem;
+                height: 5.5rem;
+                line-height: 5.5rem;
+                margin: 0 auto;
+                font-size: 2rem;
+            }
             color:#fff;
             background-color: $color-theme;
             border:3px solid #fff;
@@ -249,7 +281,8 @@ section.col-sm-12{
             height: 4.5rem;
             line-height: 4.5rem;
             text-align: center;
-            margin: 0 auto;
+            margin: .5rem auto;
+            transition: .5s;            
             @include box-shadow(0px 1px 5px rgba(150, 150, 150, 0.64))
         }
     }

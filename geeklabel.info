@@ -14,6 +14,8 @@ dependencies[] = jquery_update
 ;;;;;;;;;;;;;;;;;;;;;
 
 regions[navigation]     = 'Navigation'
+regions[header_banner]  = 'Header Banner'
+regions[before_content] = 'Before Content'
 regions[header]         = 'Top Bar'
 regions[highlighted]    = 'Highlighted'
 regions[help]           = 'Help'
@@ -48,6 +50,7 @@ scripts[] = 'bootstrap/assets/javascripts/bootstrap/popover.js'
 scripts[] = 'bootstrap/assets/javascripts/bootstrap/scrollspy.js'
 scripts[] = 'bootstrap/assets/javascripts/bootstrap/tab.js'
 scripts[] = 'bootstrap/assets/javascripts/bootstrap/transition.js'
+scripts[] = javascripts/ocSlider.js
 
 ; Disable the CDN provider so compiled source files can be used.
 settings[bootstrap_cdn] = ''

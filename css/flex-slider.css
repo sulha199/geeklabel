@@ -1,0 +1,61 @@
+/* line 1, ../scss/flex-slider.scss */
+.flex-slider {
+  overflow: hidden;
+  /*border: 1px solid #ececec;*/
+  clear: both;
+}
+/* line 2, ../scss/flex-slider.scss */
+.flex-slider .slide-buttons {
+  text-align: center;
+}
+/* line 3, ../scss/flex-slider.scss */
+.flex-slider .slide-buttons a {
+  color: #979EB2;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 0 2px;
+}
+/* line 8, ../scss/flex-slider.scss */
+.flex-slider .slide-buttons a.active {
+  color: #5BC0C3 !important;
+}
+/* line 14, ../scss/flex-slider.scss */
+.flex-slider .view-content {
+  white-space: nowrap;
+  width: 100%;
+  overflow: visible !important;
+  transition: .5s all;
+}
+/* line 15, ../scss/flex-slider.scss */
+.flex-slider .view-content .views-row {
+  display: inline-block;
+  /*border: 1px solid #0062A0;*/
+  margin: 0;
+  position: relative;
+}
+/* line 27, ../scss/flex-slider.scss */
+.flex-slider .side-button-l {
+  float: left;
+  position: relative;
+  z-index: 10;
+  font-size: 30px;
+  color: #cccfd0;
+  text-decoration: none;
+  background-color: transparent;
+  /*            position: fixed;*/
+  left: 0;
+  padding-top: 50%;
+}
+/* line 39, ../scss/flex-slider.scss */
+.flex-slider .side-button-r {
+  float: right;
+  position: relative;
+  z-index: 10;
+  font-size: 30px;
+  color: #cccfd0;
+  text-decoration: none;
+  background-color: transparent;
+  /*position: fixed;*/
+  right: 0;
+  padding-top: 50%;
+}
