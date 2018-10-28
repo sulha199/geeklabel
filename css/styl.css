@@ -1,0 +1,45 @@
+/*
+Error: Invalid charset directive '@charset': expected string.
+        on line 1 of E:/APP/Project/Corpucorp-OpenCharity/drupal geeklabel/geeklabel-shulha/themes/geeklabel/scss/style.css
+
+1: @charset "UTF-8";
+2: /**
+3:  * Default Variables.
+4:  *
+5:  * Modify this file to provide default Bootstrap Framework variables. The
+6:  * Bootstrap Framework will not override any variables defined here because it
+
+Backtrace:
+E:/APP/Project/Corpucorp-OpenCharity/drupal geeklabel/geeklabel-shulha/themes/geeklabel/scss/style.css:1
+E:/APP/Ruby/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/engine.rb:884:in `parse_charset_directive'
+E:/APP/Ruby/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/engine.rb:812:in `parse_directive'
+E:/APP/Ruby/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/engine.rb:646:in `parse_line'
+E:/APP/Ruby/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/engine.rb:536:in `build_tree'
+E:/APP/Ruby/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/engine.rb:555:in `block in append_children'
+E:/APP/Ruby/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/engine.rb:554:in `each'
+E:/APP/Ruby/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/engine.rb:554:in `append_children'
+E:/APP/Ruby/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/engine.rb:409:in `_to_tree'
+E:/APP/Ruby/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/engine.rb:281:in `render'
+E:/APP/Ruby/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:17:in `block in render'
+E:/APP/Ruby/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:29:in `with_import_scope'
+E:/APP/Ruby/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:16:in `render'
+E:/APP/Ruby/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/plugin/compiler.rb:494:in `update_stylesheet'
+E:/APP/Ruby/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+E:/APP/Ruby/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/plugin/compiler.rb:209:in `each'
+E:/APP/Ruby/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+E:/APP/Ruby/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/plugin/compiler.rb:294:in `watch'
+E:/APP/Ruby/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-1.0.3/lib/compass/sass_compiler.rb:46:in `watch!'
+E:/APP/Ruby/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-1.0.3/lib/compass/commands/watch_project.rb:41:in `perform'
+E:/APP/Ruby/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-1.0.3/lib/compass/commands/base.rb:18:in `execute'
+E:/APP/Ruby/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-1.0.3/lib/compass/commands/project_base.rb:19:in `execute'
+E:/APP/Ruby/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-1.0.3/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
+E:/APP/Ruby/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-1.0.3/lib/compass/exec/sub_command_ui.rb:15:in `run!'
+E:/APP/Ruby/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-1.0.3/bin/compass:30:in `block in <top (required)>'
+E:/APP/Ruby/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-1.0.3/bin/compass:44:in `<top (required)>'
+E:/APP/Ruby/Ruby24-x64/bin/compass:23:in `load'
+E:/APP/Ruby/Ruby24-x64/bin/compass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid charset directive '@charset': expected string.\A         on line 1 of E:/APP/Project/Corpucorp-OpenCharity/drupal geeklabel/geeklabel-shulha/themes/geeklabel/scss/style.css\A \A 1: @charset \"UTF-8\";\A 2: /**\A 3:  * Default Variables.\A 4:  *\A 5:  * Modify this file to provide default Bootstrap Framework variables. The\A 6:  * Bootstrap Framework will not override any variables defined here because it"; }

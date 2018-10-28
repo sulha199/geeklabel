@@ -873,3 +873,16 @@ a {
     margin-right: -.25em;
   }
 }
+
+.views-admin {
+    .btn .icon, .btn .icon-text{
+        background: none;
+    }
+    .form-actions{
+        display: flex;
+    }
+    
+    .form-buttons{
+        display: flex;
+    }
+}

@@ -1,0 +1,106 @@
+.h-100vh{
+    min-height: 550px;
+    height: 100vh;
+    display: block;
+    clear: both;
+    position: relative;
+    text-align:center;
+    .view-container{
+        position: relative;
+        bottom: 0rem;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%) ;
+        width: 99%;
+        min-height: 100%;
+    }
+    .view-content{
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%) ;
+    }
+    .view-header{
+        position:absolute;
+        left:50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+        h1,h3{
+            font-size: 6rem;
+            white-space: nowrap;
+        }
+    }
+    &.views-row{
+        .inner-container{
+            position: absolute;
+            bottom: 0rem;
+            left: 50%;
+            transform: translateY(-50% ) translateX(-50%) ;
+            transform: translateX(-50%);
+            width:100%;
+            text-align:center;
+            padding-top:5vh;
+            .views-field{
+                font-size: 1.5rem;
+                .field-content{
+                    margin-left:auto;
+                    margin-right:auto;
+                }  
+            }
+        }
+    } 
+
+    .scroller{
+        padding:2rem 2rem 5rem;
+        clear:both;
+        position:absolute;
+        bottom:0;
+        left:50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+        /*text-shadow: 0px 1px 5px rgba(150, 150, 150, 0.64);*/ 
+        a{
+            &:hover{
+                width: 5rem;
+                height: 5rem;
+                line-height: 5rem;
+                margin: 0 auto;
+                font-size: 1.75rem;
+            }
+            color:#fff;
+            background-color: $color-theme;
+            border:3px solid #fff;
+            @include border-top-radius(50%);
+            @include border-bottom-radius(50%);
+            font-size: 1.5rem;
+            font-weight: lighter;
+            display: block;
+            width: 4.5rem;
+            height: 4.5rem;
+            line-height: 4.5rem;
+            text-align: center;
+            margin: .25rem auto;
+            transition: .5s;            
+            @include box-shadow(0px 1px 5px rgba(150, 150, 150, 0.64))
+        }
+    }
+    h1,h2,h3{
+
+    }
+    .img-main{
+        height: 5.5rem;
+    }  
+
+    &.h-100vh-relative{
+        height:auto;
+        .view-content,.view-header,.scroller{
+            position: relative;
+            top: 0;
+            -webkit-transform: none;
+            transform: none;
+            left: 0;
+            clear: both;
+        }
+    }
+}
