@@ -54,5 +54,7 @@ It use "view-clients" as the classname for the formatting and also have "flex-sl
 ```
 <div .. class="view-clients flex-slider flex-width-300...">
 ```
-###Contact Form
+### Map
+Map is using Google Map and is already using simple-silver theme. However, I've exceed the quota for my map and the map doesnt show correctly
+### Contact Form
 The contact form is modified by creating file template inside the theme.
