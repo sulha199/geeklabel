@@ -16,12 +16,12 @@
         this.className = className;
         this.sliders = document.getElementsByClassName(className);
         this.widthGap = 0.01;
+        this.resolutionGap = 768;
         this.init();
     }
 
     Ocslider.prototype = {
         init: function () {
-            console.log('slider initiates')
             for (var i = 0; i < this.sliders.length; i++) {
                 var el = this.sliders[i];
                 var pw = el.offsetWidth;
@@ -40,11 +40,10 @@
                 });
                 // assign width to col
                 var childs = el.getElementsByClassName('views-row');
-                var colcount = Math.floor(pw / width);
+                var colcount = Math.max(Math.floor(pw / width),1);
                 var buttons = Math.ceil(pw / width);
-                var coldiv = (childs.length < colcount) ? childs.length : colcount;
+                var coldiv = Math.max((childs.length < colcount) ? childs.length : colcount, 1);
                 var colwidth = (100 / coldiv) - this.widthGap;
-
 
                 if (childs.length < 2) {
                     return;
@@ -63,15 +62,35 @@
                 // make sure the left ofset not outside the bound
                 this.pullBy(el, currentActiveButtonId * 100, colcount);
 
-                if (sidebutton) {
+                // remove existing button
+                this.removeButton(el);
+                // if screenwidth  is smaller than this.resolutionGap then use bullet
+                if (window.innerWidth > this.resolutionGap) {
                     this.putSideButton(el, colcount, i);
                 } else {
                     this.putBulletButton(el, colcount, i);
                 }
             }
         },
+        removeButton:function(el){
+            // remove side button
+            var butl = el.getElementsByClassName('side-button-l');
+            if (butl.length > 0) {
+                butl[0].remove();
+            }
+            var butr = el.getElementsByClassName('side-button-r');
+            if (butr.length > 0) {
+                butr[0].remove();
+            }
+            
+            // remove bullet button
+            var buts = el.getElementsByClassName('slide-buttons');
+            // always remove buttons
+            if (buts.length > 0) {
+                buts[0].remove();
+            }
+        },
         putSideButton: function (el, colcount, i) {
-            console.log(el);
             var childs = el.getElementsByClassName('views-row');
             var butl = el.getElementsByClassName('side-button-l');
             if (butl.length > 0) {
@@ -89,6 +108,7 @@
             butl = document.createElement("a");
             butl.className = 'side-button-l';
             butl.innerHTML = "&#10094;";
+            butl.style.lineHeight = childs[0].offsetHeight + 'px';
             butl.onclick = function (e) {
                 OSlider.pullLeft(OSlider.sliders[i], colcount);
             };
@@ -96,6 +116,7 @@
             butr = document.createElement("a");
             butr.className = 'side-button-r';
             butr.innerHTML = "&#10095;";
+            butr.style.lineHeight = childs[0].offsetHeight + 'px';
             butr.onclick = function (e) {
                 OSlider.pullRight(OSlider.sliders[i], colcount);
             };
@@ -131,7 +152,7 @@
             // add butttons
             buts = document.createElement("div");
             buts.className = 'slide-buttons';
-            el.appendChild(buts);
+            el.getElementsByClassName('view-container')[0].getElementsByClassName('view-content')[0].appendChild(buts);
 
             var buttonCount = Math.ceil(childs.length / colcount);
             // make sure the active button is not for button outside 

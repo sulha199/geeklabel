@@ -1,0 +1,147 @@
+// Layout
+body{  
+    font-family: MuseoSans300, 'Museo Sans';
+    color: $color-text;
+    &.front{
+        #block-system-main{
+            display: none;
+        }
+    }
+    .container{
+        width: 90%;
+        @media (min-width: $screen-md-min){
+            width:auto;
+        }
+    }
+    .region{
+        padding-top: 3rem;
+        &:empty{
+            padding-top: 0;
+        }
+        &.region-header-banner{
+            padding-top: 0;
+        }
+        &.header-banner{
+            padding-top: 0; 
+        }
+        &.region-page-top{
+            padding-top:0;
+        }
+    }
+    a{
+        color: $color-link;
+        text-decoration: initial;
+        &:hover{
+            color: $color-theme;
+        }
+    }
+    b, strong{
+        color: $color-link;
+    }
+
+    input[type=button], .btn-default{
+        display: block;
+        background: $color-theme;
+        color: #fff;
+        border:0px solid transparent;
+        @include box-shadow(0);
+        &:hover{
+            background-color: $color-text;
+            color:#fff;
+        }
+    }
+
+    .full-width {
+        width: 100vw;
+        position: relative;
+        margin-left: -50vw;
+        margin-right: -50vw;
+    }
+
+    iframe.map{
+        border: 0;
+        height: 350px;
+    }
+
+    header#navbar{
+        margin: 0;
+        margin-top: 0px;
+        background-color: $color-theme;
+        border:0px;
+        color: #fff;
+        @include border-top-radius(0);
+        @include border-bottom-radius(0);  
+        h1,h2,h3,a{
+            color: inherit;
+        }
+        h1{
+            font-size: 5rem;
+        }
+        .navbar-header{
+            .logo-container{
+                a.logo{
+                    img{
+                        height: 1em; 
+                        margin-top: .6em;
+                    }
+                    margin-right: 10px;
+                    padding-right: 0;
+                }
+                a.navbar-brand{
+                    &:hover{
+                        color: #fff;
+                    }
+                    font-size: 1em;
+                }
+                text-align: center;
+            }
+        }
+    }
+
+    section{
+        .highlighted.jumbotron{
+            padding-top: 0;
+            padding-bottom: 0;
+            background-color:$color-bgsoft;
+            margin-bottom:0;
+            .block{
+                .view-header{
+                    h1,h3{
+                        font-size: 6rem;
+                        white-space: nowrap;
+                    }
+                }
+            }
+        }
+        .region.region-content{
+            .block{
+                .view-header{
+                    h1,h3{
+                        font-size: 6rem;
+                    }
+                }
+                .block-title{
+                    font-size: 6rem;
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    div.before-content{
+        background-color: $color-bgsoft;
+    }
+
+    section.col-sm-12{
+        padding: 0;
+    }
+
+    footer.footer{
+        background-color: $color-bgsoft;
+        margin-top: 0;
+        border-top: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-bottom: 3rem;
+    }
+}

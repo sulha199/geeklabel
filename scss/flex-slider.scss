@@ -7,14 +7,16 @@
     }
     &.flex-sidebutton.has-button.has-button-outside{
         .view-content{
-            margin-left: -15px;
-            margin-right: -15px;
+            margin-left: auto;
+            margin-right: auto;
         }
         .side-button-l{
             left: -30px;
+            padding-left: 15px;
         }
         .side-button-r{
             right: -30px;
+            padding-right: 15px;
         }
         overflow: visible !important;
     }
@@ -51,6 +53,8 @@
         float: left;
         position: absolute;
         top: 50%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
         z-index: 9;
         font-size: 30px;
         color: #C8CBCC;
@@ -66,6 +70,8 @@
         float: right;
         position: absolute;
         top: 50%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
         z-index: 9;
         font-size: 30px;
         color: #C8CBCC;

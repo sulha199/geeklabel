@@ -1,0 +1,199 @@
+div.view{
+    .views-field-field-image{
+        text-align: center;
+        .field-content{
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto; 
+            img{
+                margin-left: auto;
+                margin-right: auto; 
+            }
+        }
+    }
+}
+
+.view-site-logo{
+    max-width: 550px;
+    padding: 0 25px;
+    margin: 0 auto;
+}
+
+.view-display-id-block.inline-rows{
+    .inner-container{
+        @media (max-width: $screen-md-min){
+            display:flex;
+            .views-field-field-image{
+                padding-right: 3rem;
+            }
+        }
+    }
+    .view-content{
+        width: 100%;
+        @media (min-width: $screen-md-min){
+            display:flex;
+        }        
+    }
+    .views-row{
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+        @media (min-width: $screen-md-min){
+            clear:none;
+        }        
+        .views-field{
+            font-size:2rem;
+            @media (max-width: $screen-md-min){
+                span.field-content{
+                    top: 50%;
+                    -webkit-transform: translateY(-50%);
+                    transform: translateY(-50%) ;
+                    position: absolute;
+                }
+
+            }
+
+        }
+    }
+    .scroller{
+        padding-top: 1rem;
+    }
+}
+
+.view-id-clients{
+    .view-content{
+        .views-row{
+            padding: 3em 0;
+            .views-field-field-image{
+                text-align:center;
+                position:relative;
+                .field-content{
+                    img{
+                        height: 6rem;
+                        width: auto;
+                    }
+                } 
+            }
+        }
+    }
+
+
+
+    .scroller{
+        a{
+            border-color: $color-text;
+            border-width: 1.5px;
+            color: $color-text;
+            background: transparent;
+        }
+    }
+}
+
+.view-id-how_to_find_us{
+    .view-container{
+        width: 100%;
+        transform: none;
+        left: 0;
+        .container{
+            width: 100%;
+            padding: 0;
+        }
+    }
+}
+
+.view-what-we-do{
+    .views-row {
+        .inner-container {
+            .views-field {               
+                .field-content{
+                    p{
+                        font-size: 3rem;
+                    }
+                }
+            }
+            .views-field-field-image {
+                .field-content{
+                    max-width: 80%;
+                    width: 450px;
+                }
+            }
+            .views-field-body{
+                width: 100%;
+                height: 12em;
+                .field-content{
+                    position: absolute;
+                    bottom: 1em;
+                    width: 100%;
+                }
+            }
+        }   
+    } 
+}
+
+#block-formblock-contact-site{
+    text-align:center;
+    .container{
+        h3{
+            font-size: 6rem;
+            margin-bottom: 3rem;
+        }
+        label{
+            display: none;
+        }
+        input{
+            font-size: 2rem;
+            padding: 1.3em .7em;
+            border: 2px solid #DADADA;
+            width: 100%;
+        }
+        textarea{
+            font-size: 2rem;
+            border: 2px solid #DADADA;
+            width: 100%;
+        }
+        button{
+            font-size: 2rem;
+            width: 100%;
+            border:0px solid transparent;
+            padding: .7em 1em;
+        }
+        max-width: 450px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.view-services{
+    .views-row{
+        .views-field{
+            &.views-field-field-image{
+                padding-bottom: 3rem;
+                @media (max-width: $screen-md-min){
+                    padding-right: 3rem;
+                    padding-bottom:0;
+                }
+                .field-content{
+                    width: 6.5rem;
+                    height: 6.5rem;
+                    text-align: center;
+                    @media (min-width: $screen-md-min){
+                        width: 19rem;
+                        height: 19rem;
+                    }
+                    img{
+                        margin-left: auto;
+                        margin-right: auto; 
+                    }
+                }
+
+            }
+        }
+    }
+    .scroller{
+        a{
+            border-color: $color-text;
+            border-width: 1.5px;
+            color: $color-text;
+            background: transparent;
+        }
+    }
+}

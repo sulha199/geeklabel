@@ -11,7 +11,9 @@ function geeklabel_preprocess_html(&$vars)
         ),
     );
     drupal_add_html_head($viewport, 'viewport');
+    drupal_add_js(drupal_get_path('theme', 'geeklabel') . '/javascripts/h100vh.js');
     drupal_add_js(drupal_get_path('theme', 'geeklabel') . '/javascripts/ocSlider.js');
+    drupal_add_js(drupal_get_path('theme', 'geeklabel') . '/javascripts/contact-form.js');
 }
 
 ?>

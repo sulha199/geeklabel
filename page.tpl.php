@@ -75,15 +75,7 @@
 ?>
 <header id="navbar" role="banner" class="<?php print $navbar_classes; ?>">
     <?php if (drupal_is_front_page()): ?>
-        <div class="h-100vh">
-            <div class="view-container">
-                <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" class="img-main"/>
-                <h1><?php print $site_name; ?></h1>
-                <?php if (!empty($site_slogan)): ?>
-                    <p class="lead"><?php print $site_slogan; ?></p>
-                <?php endif; ?>
-            </div>            
-        </div>
+        
     <?php else: ?>
         <div class="<?php print $container_class; ?>">
             <div class="navbar-header">
@@ -126,7 +118,7 @@
             <?php endif; ?>
         </div>
     <?php endif; ?>
-    <div class="header-banner">
+    <div class="region header-banner">
         <div class="<?php print $container_class;?>">
             <?php if (!empty($page['header_banner'])): ?>
                 <?php print render($page['header_banner']); ?>
@@ -135,7 +127,7 @@
     </div>
 </header>
 
-<div class="before-content">
+<div class="region before-content">
     <div class="<?php print $container_class; ?>">
         <?php if (!empty($page['before_content'])): ?>
             <?php print render($page['before_content']); ?>
@@ -194,59 +186,10 @@
 </div>
 
 <?php if (!empty($page['footer'])): ?>
-    <footer class="footer">
+    <footer class="region footer">
         <div class="<?php print $container_class; ?>">
             <?php print render($page['footer']); ?>
         </div>
     </footer>
 <?php endif; ?>
-
-<script>
-    (function ($) {
-        // Use jQuery with the shortcut:
-        function h100vh_init() {
-            $(".h-100vh > .inner-container, .h-100vh > .view-container").append('<br/><div class="scroller col-sm-12"><a href="#"><span class="glyphicon glyphicon-menu-down"></span></a></div>');
-            $("div.scroller").scrollTop(300);
-            $("div.scroller a").click(function (event) {
-                event.preventDefault();
-                var parent = $(this).parent();
-//                window.scrollTo(0, parent.offset().top + parent.outerHeight());
-//                $(body).animate(function () {
-//                    window.scrollTo(0, parent.offset().top + parent.outerHeight());
-//                });
-
-                $('html, body').animate({scrollTop: parent.offset().top + parent.outerHeight()}, 500);
-
-            });
-        }
-
-        function h100vh_resize() {
-            $(".h-100vh > .inner-container, .h-100vh > .view-container").each(function () {
-                if ($(this).outerHeight() > $(window).height())
-                    $(this).css('position', 'relative');
-                else
-                    $(this).css('position', 'absolute');
-            });
-        }
-
-        $(document).ready(function ($) {
-            // Code that uses jQuery's $ can follow here.
-            //alert();
-            h100vh_init();
-            h100vh_resize();
-        });
-        $(window).resize(function () {
-            h100vh_resize();
-        });
-        console.log($.browser);
-        // Here we immediately call the function with jQuery as the parameter.
-    }(jQuery));
-
-
-//    jQuery(document).ready(function ($) {
-//        // Code that uses jQuery's $ can follow here.
-//        //alert();
-//        h100vh_init();
-//    });
-</script>
 

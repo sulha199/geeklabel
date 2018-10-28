@@ -59,12 +59,3 @@
     </div>
 
 </section>
-
-<script>
-    (function ($) {
-        $('#edit-name').attr('placeholder', 'Name');
-        $('#edit-mail').attr('placeholder', 'Email');
-        $('#edit-subject').attr('placeholder', 'Subject');
-        $('#edit-message').attr('placeholder', 'Message');
-    }(jQuery));
-</script>
